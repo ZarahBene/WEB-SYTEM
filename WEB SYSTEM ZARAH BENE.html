@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Flexbox Gallery</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #aa9679;
+        font-family: Arial, sans-serif; /* Use a common font for better compatibility */
+      }
+  
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: auto;
+      }
+  
+      .gallery-item {
+        flex: 0 0 33.33%;
+        box-sizing: border-box;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-self: start;
+        justify-content: center;
+        flex-direction: column;
+      }
+  
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+  
+      .gallery-item img:hover {
+        transform: scale(1.1);
+      }
+  
+      .caption {
+        text-align: center;
+        margin-top: 10px;
+        color: #333; /* Darker text for better readability */
+      }
+  
+      button {
+        color: #333;
+        font-size: medium;
+        cursor: pointer;
+        background-color: #dad6d0; /* Light background for better visibility */
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+  
+      button:hover {
+        background-color: #bbb; /* Slightly darker background on hover */
+      }
+      @media only screen and (min-width: 33.75em){
+    .gallery-item{
+      flex-basis: calc(50% - 2rem);
+    }
+  }
+  @media only screen and (min-width: 48em){
+    .gallery-item{
+      flex-basis: calc((100% / 3) - 2rem);
+    }
+  }
+  @media only screen and (min-width: 60em){
+    .gallery-item{
+      flex-basis: calc((100% / 4) - 2rem);
+    }
+  }
+  @media only screen and (min-width: 72em){
+    .gallery-item{
+        flex-basis: calc((100% / 5) - 2rem);
+    }
+  }
+    </style>
+  </head>
+  
+<body>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1705931622854-081e347b18ad?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+      <p class="caption">TOP</p></br>
+      <button type="button">button</button>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1705861112562-17299d5850dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Image 2">
+      <p class="caption">SEA</p>
+      <button type="button">button</button>
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1705722701024-e92cf3c5ac4b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Image 3">
+        <p class="caption"></p>
+        <button type="button">button</button>
+    </div>
+    <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1705832405321-611d19b1d71d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Image 1">
+        <p class="caption">SEAL</p>
+        <button type="button">button</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1705517649861-5450dc4dd44a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDUxfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Image 1">
+        <p class="caption"></p>
+        <button type="button">button</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1682687220198-88e9bdea9931?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8" alt="Image 1">
+        <p class="caption"></p>
+        <button type="button">button</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1706535564563-d5613c74b78d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+        <p class="caption"></p>
+        <button type="button">button</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1706474178699-7e3db9b2ba92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+        <p class="caption"></p>
+        <button type="button">button</button>
+    </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1697462248408-25479e5acfb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1NXx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+        <p class="caption">NATURE</p>
+        <button type="button">button</button>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1706766957895-65376015bbee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+      <p class="caption">NATURE</p>
+      <button type="button">button</button>
+  </div>
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1682685797439-a05dd915cee9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8NjR8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D" alt="Image 1">
+    <p class="caption">NATURE</p>
+    <button type="button">button</button>
+</div>
+<div class="gallery-item">
+  <img src="https://images.unsplash.com/photo-1706550037547-ead67be5816e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D" alt="Image 1">
+  <p class="caption">NATURE</p>
+  <button type="button">button</button>
+</div>
+<div class="gallery-item">
+  <img src="https://images.unsplash.com/photo-1706202603197-e2bc1bf10a3c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQzfEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D" alt="Image 1">
+  <p class="caption">ARCHTECTURE</p>
+  <button type="button">button</button>
+</div>
+<div class="gallery-item">
+  <img src="https://images.unsplash.com/photo-1703946404789-a17168d9f8f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ2fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D" alt="Image 1">
+  <p class="caption">ARCHTECTURE</p>
+  <button type="button">button</button>
+</div>
+<div class="gallery-item">
+  <img src="https://images.unsplash.com/photo-1599585296690-a918bd4451b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJhbGklMjBpbmRvbmVzaWF8ZW58MHx8MHx8fDA%3D" alt="Image 1">
+  <p class="caption">BALI</p>
+  <button type="button">button</button>
+</div>
+<div class="gallery-item">
+  <img src="https://plus.unsplash.com/premium_photo-1669278728727-e058405e6a70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJhbGklMjBpbmRvbmVzaWF8ZW58MHx8MHx8fDA%3D" alt="Image 1">
+  <p class="caption">MOTHER AND DAUGHTER</p>
+  <button type="button">button</button>
+</div>
+<div class="gallery-item">
+  <img src="https://images.unsplash.com/photo-1706711075000-fc7ffecd563c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI3fGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D" alt="Image 1">
+  <p class="caption"></p>
+  <button type="button">button</button>
+</div>
+<div class="gallery-item">
+  <img src="https://images.unsplash.com/photo-1706636604979-5014cfb76625?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGhtZW52UWhVbXhNfHxlbnwwfHx8fHw%3D" alt="Image 1">
+  <p class="caption"></p>
+  <button type="button">button</button>
+</div>
+
+  </div>
+
+</body>
+</html>
